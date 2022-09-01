@@ -1,0 +1,28 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-kubernetes-client-pod
+  labels:
+    app: webserver
+spec:
+  containers:
+  - name: hello-kubernetes-client
+    image: wrre/hello-kubernetes-client:v1
+    ports:
+    - containerPort: 3000
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myddos
+  labels:
+    org: python
+    class: ddos
+    app.kubernetes.io/name: myddos
+spec:
+  containers:
+  - name: pod
+    image: docker.io/chriskewis/my_ddos
+    command: ["/bin/bash", "-ce", "tail -f /dev/null"]
+

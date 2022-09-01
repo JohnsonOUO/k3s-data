@@ -1,0 +1,10 @@
+name: tutorial
+dependencies:
+    - numpy
+    - pandas
+    - seaborn
+    - pip
+    - xgboost
+    pip:
+      - mlflow
+      - sklearn

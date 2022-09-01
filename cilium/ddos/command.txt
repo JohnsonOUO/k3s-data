@@ -1,0 +1,4 @@
+kubectl exec hello-kubernetes-client-pod -- curl -s XPOST deathstar.default.svc.cluster.local/v1/request-landing
+---
+kubectl exec -it myddos -- bash
+  -> python3 start.py tcp http://10.0.0.172 1 10 
